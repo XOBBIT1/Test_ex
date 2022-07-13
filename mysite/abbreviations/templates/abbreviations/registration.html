@@ -1,0 +1,25 @@
+{% extends 'abbreviations/abbreviations.html'%}
+
+{% block title %}
+Registration
+{% endblock %}
+{% block content %}
+{% if form.errors %}
+<p> Произошла ошибка ввода </p>
+{% endif %}
+  <form action="{% url 'register' %}" method="POST">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Registration form</h1>
+
+    {{form}}
+
+    <button type="submit" class="btn btn-primary">Regisstrate</button>
+  </form>
+</main>
+
+
+
+
+
+</body>
+{% endblock %}

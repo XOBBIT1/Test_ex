@@ -1,0 +1,38 @@
+{% extends 'abbreviations/abbreviations.html'%}
+
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+    <body class="text-center" data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="">
+
+<main class="form-signin">
+  <form action="" method="POST">
+    {% csrf_token%}
+    <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" name="username" placeholder="Username">
+      <label for="floatingInput">Username</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="password" class="form-control" name="password" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</main>
+
+
+
+
+
+</body>
+{% endblock %}
